@@ -3,6 +3,18 @@
     <title> Home </title>
 </head>
 <body>
+    <a href="/"> Home </a>
     <a href="/login"> Login</a>
     <a href="/signup"> Signup </a>
+
+    {{#if result}}
+    {{#each result}}
+    <div>
+        <img src="{{item}}.jpg" alt="{{item}}" width="200px" height="200px"><br>
+        <a href="/product/{{item}}"> {{item}}  </a>
+        <p> {{price}} </p>
+        <p> {{qty}} </p>
+    </div>
+    {{/each}}
+    {{/if}}
 </body>

@@ -18,7 +18,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.static('public'));
 
 app.use(session({
-	secret: 'Terra',
+	secret: 'Innoatech',
 	resave: false,
 	saveUninitialized: false,
 	store: MongoStore.create({ mongoUrl: url })
@@ -27,6 +27,7 @@ app.use(session({
 db.connect();
 
 app.use('/', routes);
+
 
 app.listen(port, function(){
 	console.log('Server running at port ' + port);
