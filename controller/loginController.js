@@ -16,15 +16,18 @@ const loginController = {
         var p = req.body.password;
 		console.log ("Logging in " + u + " ...");
         var query1 = {phone: u};
+
+			// finds if user is existing
 			db.findOne(User, query1, null, function(x) {
 				console.log("went here pa rin");
+				// checks if password is equal
 				if(x)
 					bcrypt.compare(p, x.password, function(err, equal) {
 						
 						if(equal){
 							
-							// req.session.phone = x.phone;
-							// req.session.name = x.name;
+							req.session.phone = x.phone;
+							req.session.name = x.fname;
 							
 							console.log(' Successfully Logged In ' + x.phone);
 

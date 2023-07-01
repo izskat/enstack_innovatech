@@ -23,6 +23,8 @@ const signupController = {
         var storeadd = req.body.storeadd;
 
         console.log("Registering " + phone + "...");
+        
+        // crypts the password of the user
         bcrypt.hash(pass, saltRounds, function(err, hash) {
             var user = {
                 phone: phone,
@@ -32,7 +34,7 @@ const signupController = {
                 storename:storename,
                 storeadd: storeadd
             }
-
+            // checks if the phone is already taken
             db.findOne(User, {phone:phone}, '', function (result) {
                 if (result) {
                     console.log("Phone is Taken")
@@ -43,12 +45,13 @@ const signupController = {
                     res.render('register');
                     }
                     else{
+                        // if phone number is unique it is added to the database
                         db.insertOne(User, user, function(flag){
                             if(flag){
                                 console.log('Created account of ' + fname);
 
                                 var query = { phone: phone };
-
+                                // double checks if its in the database
                                 db.findOne(User, query, null, function (result) {
                                     if (result)
                                         bcrypt.compare(pass, result.password, function (err, equal) {
