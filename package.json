@@ -1,11 +1,10 @@
 {
-  "name": "enstack",
+  "name": "enstack_innovatech",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node index.js"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
@@ -16,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/izskat/enstack_innovatech/issues"
   },
-  "homepage": "https://github.com/izskat/enstack_innovatech#readme"
+  "homepage": "https://github.com/izskat/enstack_innovatech#readme",
+  "dependencies": {
+    "all": "^0.0.0"
+  }
 }
