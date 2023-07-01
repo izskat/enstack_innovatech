@@ -3,17 +3,15 @@ const url = 'mongodb+srv://innovatech:jRb1O2GRJSxDme3N@innovatech.6cdiwky.mongod
 
 const options = {
     useUnifiedTopology: true,
-    useNewUrlParser: true,
-	useCreateIndex: true,
-	useFindAndModify: false
+    useNewUrlParser: true
 }
 
 const database = {
 
-    connect: function (){
-        mongoose.connect(url, options, function(error){
-        if (error) throw error;
-        console.log ('Connected to: ' + url);
+    connect: function () {
+        mongoose.connect(url, options, function(error) {
+            if(error) throw error;
+            console.log('Connected to: ' + url);
         });
     },
 
