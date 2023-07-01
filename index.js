@@ -19,10 +19,6 @@ db.connect();
 
 app.use('/', routes);
 
-app.use(function (req, res) {
-    res.render('error');
-});
-
 app.listen(port, function(){
 	console.log('Server running at port ' + port);
 });
