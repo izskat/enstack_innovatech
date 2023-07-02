@@ -111,12 +111,12 @@
       <div class="frame-container">
         {{#if result}}
         {{#each result}}
-        <div class="image-9-parent">
+        <a href="/details"><div class="image-9-parent">
           <img class="image-9-icon" name="{{item}}" src="{{item}}.png" />
         <div class="pork">{{item}}</div>
         <p> {{price}} </p>
         <p> {{qty}} </p>
-        </div>
+        </div></a>
         {{"\n"~}}
         {{/each}}
         {{/if}}

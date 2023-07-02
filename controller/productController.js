@@ -1,5 +1,6 @@
 const db = require('../model/db.js');
 const Product = require('../model/product.js');
+const Cart = require('../model/cart.js');
 
 const productController = {
     addProducts: function(req,res){
@@ -30,7 +31,7 @@ const productController = {
     },
 
     getProductDetail:function(req,res){
-        item = req.params.id;
+        item = 'Porkchop'
         var query = {item: item}
 
         db.findOne(Product, query, null, function(x){
@@ -42,10 +43,39 @@ const productController = {
                 category: x.category,
                 info: x.info,            
             }           
-
-            res.render('product', {result: result, phone: req.session.phone})
+            console.log(result)
+            res.render('details', {result: result, phone: req.session.phone})
         })
     },
+
+    addToCart:function(req,res){
+        console.log("ADD TO KARTO")
+        var phone = req.session.phone;
+        var qty = req.body.kilo
+        var result = {}
+
+        item = 'Porkchop'
+        var query = {item: item}
+
+        if(phone)
+        {
+            var product = {
+                phone: phone,
+                item: item,
+                qty: qty,
+                price: 300.00
+            }
+            db.insertOne(Cart, product, function(flag){
+                if (flag){
+                    console.log('Added to cart ' + item + ' for ' + phone);
+                    res.render('product', {success: 'Item added to cart', phone: req.session.phone});
+                }
+            });
+        }
+        else{
+            res.render('login');
+        }
+    }
 }
 
 module.exports = productController;

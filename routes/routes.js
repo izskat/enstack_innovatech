@@ -19,5 +19,7 @@ app.get('/signup', signupController.getSignup);
 app.post('/signup',signupController.postSignup);
 
 app.get('/product', productController.getProducts);
+app.get('/details', productController.getProductDetail);
+app.post('/details', productController.addToCart);
 
 module.exports = app;
