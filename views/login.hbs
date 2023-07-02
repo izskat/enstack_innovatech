@@ -1,81 +1,22 @@
-{{!-- <!DOCTYPE html>
-<head>
-    <title> Login </title>
-</head>
-<body>
-    <a href="/"> Home </a> <br>
-    <form method = "post">
-        <label for = phone> Phone </label>
-        <input type ="text" placeholder="Enter Phone" name="phone" id="phone" required>
-
-        <label for = password> Passowrd </label>
-        <input type ="password" placeholder="Enter Password" name="password" id="password" required>
-
-        <input type="submit" id="submit" value="Submit"/>
-        <a href="/signup">Signup</a>
-    </form>
-
-    <div>
-        
-    </div>
-</body> --}}
-
 <!DOCTYPE html>
 <html>
     <head>
         <meta charset="utf-8" />
-        <title> Login </title>
         <meta name="viewport" content="initial-scale=1, width=device-width" />
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Righteous:wght@400;700&display=swap"/>
-        <link href="/css/style.css" rel="stylesheet" />
+        <link rel="stylesheet" href="../public/css/style.css" />
+        <title> Kainderya | Log in </title>
     </head>
 
 <body>
-    {{>navbar}}
-    <div class="desktop-2">
-      <b class="tuloy-po-kayo">Tuloy po kayo!</b>
-      <div class="enter-your-mobile-container">
-        <form method = "post">
-        <label for = phone> Phone </label>
-        <input type ="text" placeholder="Enter Phone" name="phone" id="phone" required>
-        <br>
-        <label for = password> Passowrd </label>
-        <input type ="password" placeholder="Enter Password" name="password" id="password" required>
-
-        <input type="submit" id="submit" value="Submit"/>
+    {{> navbar}}
+  <div class="login-container">
+    <h1 class="welcome-header">Tuloy po kayo!</h1>
+    <form class="login-form">
+      <label for="mobile-number">Enter your Mobile Number</label>
+      <input type="text" id="mobile-number" placeholder="Mobile number">
+      <button type="submit" class="login-button">Log in</button>
+      <p class="signup-link">Don't have an account? <a href="#">Sign up</a></p>
     </form>
-      </div>
-      <div class="vector-parent">
-        <img class="vector-icon" alt="" src="./public/vector.svg" />
-
-        <div class="div">+63</div>
-      </div>
-      <div class="dont-have-account-container">
-        <span>
-          <span class="dont-have-account">Don’t Have Account?</span>
-          <span class="span1"> </span>
-        </span>
-        <a href="/signup"><b class="sign-up">Sign up</b></a>
-      </div>
-      <div class="sign-in-wrapper">
-        <b class="sign-in">Sign In</b>
-      </div>
-      <div class="vector-group">
-        <img class="frame-child" alt="" src="./public/arrow-1.svg" />
-
-        <div class="balik">Balik</div>
-      </div>
-      <div class="desktop-2-child"></div>
-      <b class="kain-na">KAIN NA</b>
-      <img class="desktop-2-item" alt="" src="./public/frame-6.svg" />
-
-      <img class="desktop-2-inner" alt="" src="./public/frame-7.svg" />
-
-      <img class="frame-icon" alt="" src="./public/frame-8.svg" />
-
-      <div class="rectangle-div"></div>
-      <div class="maghanap-dito">Maghanap dito</div>
-    </div>
+  </div>
   </body>
 </html>
