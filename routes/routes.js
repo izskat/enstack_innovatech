@@ -4,6 +4,7 @@ const loginController = require('../controller/loginController');
 const signupController = require('../controller/signupController');
 const productController = require('../controller/productController');
 const logoutController = require('../controller/logoutController');
+const checkoutController = require('../controller/checkoutController');
 
 const app = express();
 
@@ -21,5 +22,7 @@ app.post('/signup',signupController.postSignup);
 app.get('/product', productController.getProducts);
 app.get('/details', productController.getProductDetail);
 app.post('/details', productController.addToCart);
+
+app.get('/checkout', checkoutController.getCheckout);
 
 module.exports = app;

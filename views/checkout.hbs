@@ -3,8 +3,8 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-    <link rel="stylesheet" href="./global.css" />
-    <link rel="stylesheet" href="./index.css" />
+    <link href="/css/checkout.css" rel="stylesheet" />
+    <link href="/css/index.css" rel="stylesheet" />
     <link
       rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Righteous:wght@400&display=swap"
@@ -14,448 +14,107 @@
       href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;600;700&display=swap"
     />
   </head>
-
-<style>
-body {
-  margin: 0;
-  line-height: normal;
-}
-
-:root {
-  /* fonts */
-  --body-lg-semi: Barlow;
-  --font-righteous: Righteous;
-
-  /* font sizes */
-  --font-size-5xl: 24px;
-  --body-lg-semi-size: 16px;
-  --semi-size: 14px;
-
-  /* Colors */
-  --gray-50: #f9fafb;
-  --gray-100: #f3f4f6;
-  --color-black: #000;
-  --gray-800: #1f2937;
-  --gray-200: #e5e7eb;
-  --color-gainsboro-100: #d9d9d9;
-  --gray-300: #d2d5da;
-  --orange-200: #fed7aa;
-  --orange-500: #f97316;
-
-  /* Gaps */
-  --gap-base: 16px;
-
-  /* Paddings */
-  --padding-5xl: 24px;
-  --padding-xs: 12px;
-
-  /* border radiuses */
-  --br-981xl: 1000px;
-}
-
-.kainderya {
-  position: relative;
-  line-height: 17.94px;
-}
-.kainderya-wrapper {
-  width: 200px;
-  display: flex;
-  flex-direction: row;
-  padding: 56px 10px;
-  box-sizing: border-box;
-  align-items: center;
-  justify-content: center;
-}
-.market-icon {
-  position: relative;
-  width: 24px;
-  height: 24px;
-}
-.home {
-  position: relative;
-  line-height: 140%;
-  font-weight: 600;
-}
-.base-sidebar-item,
-.sidebar-item {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: flex-start;
-}
-.sidebar-item {
-  gap: var(--gap-base);
-}
-.base-sidebar-item {
-  position: absolute;
-  top: 0;
-  left: 0;
-  background-color: var(--gray-50);
-  width: 200px;
-  padding: var(--padding-xs) var(--padding-5xl);
-  box-sizing: border-box;
-}
-.base-sidebar-item-states {
-  position: absolute;
-  height: 100%;
-  width: 100%;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-}
-.palengke {
-  position: relative;
-  width: 200px;
-  height: 48px;
-}
-.base-sidebar-item1 {
-  position: absolute;
-  top: 0;
-  left: 0;
-  background-color: var(--orange-200);
-  width: 200px;
-  display: flex;
-  flex-direction: row;
-  padding: var(--padding-xs) var(--padding-5xl);
-  box-sizing: border-box;
-  align-items: center;
-  justify-content: flex-start;
-}
-.basket {
-  position: relative;
-  width: 200px;
-  height: 48px;
-  color: var(--orange-500);
-}
-.palengke-parent {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end;
-  justify-content: flex-start;
-  gap: 8px;
-}
-.divider-horizontal-child {
-  position: absolute;
-  height: 100%;
-  width: 100%;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  background-color: var(--gray-200);
-}
-.divider-horizontal {
-  position: relative;
-  width: 164px;
-  height: 1px;
-}
-.help-parent {
-  align-items: flex-start;
-}
-.frame-group,
-.frame-parent,
-.help-parent {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-}
-.frame-group {
-  align-items: center;
-  gap: 24px;
-  font-size: var(--semi-size);
-  color: var(--gray-800);
-  font-family: var(--body-lg-semi);
-}
-.frame-parent {
-  position: absolute;
-  top: 0;
-  left: 0;
-  background-color: var(--gray-50);
-  border-right: 1px solid var(--gray-300);
-  box-sizing: border-box;
-  height: 1281px;
-  align-items: flex-start;
-  font-size: 32px;
-  color: var(--orange-500);
-  font-family: var(--font-righteous);
-}
-.checkout,
-.cod,
-.e-wallet,
-.orders,
-.payment-details {
-  position: absolute;
-  top: 62.2px;
-  left: 256px;
-  letter-spacing: 0.22px;
-  line-height: 17.94px;
-  font-weight: 600;
-}
-.cod,
-.e-wallet,
-.orders,
-.payment-details {
-  top: 417px;
-  left: 233px;
-}
-.cod,
-.e-wallet,
-.payment-details {
-  top: 940px;
-}
-.cod,
-.e-wallet {
-  top: 1003px;
-  left: 301px;
-}
-.e-wallet {
-  top: 1058px;
-}
-.my-basket-child {
-  position: absolute;
-  top: 217px;
-  left: 225px;
-  background-color: var(--color-gainsboro-100);
-  width: 1135px;
-  height: 124px;
-}
-.adress-here {
-  position: absolute;
-  top: 279px;
-  left: 248px;
-  font-size: var(--body-lg-semi-size);
-  line-height: 140%;
-  display: inline-block;
-  width: 942px;
-}
-.delivery-address {
-  position: absolute;
-  top: 244px;
-  left: 250px;
-  letter-spacing: 0.22px;
-  line-height: 17.94px;
-  font-weight: 600;
-}
-.change {
-  position: absolute;
-  top: 252px;
-  left: 1271px;
-  font-size: var(--body-lg-semi-size);
-  line-height: 140%;
-}
-.my-basket-item {
-  position: absolute;
-  top: 461px;
-  left: 228px;
-  background-color: var(--gray-200);
-  width: 1128px;
-  height: 55px;
-}
-.base-price-per,
-.delivery-frequency,
-.item,
-.kg,
-.subtotal {
-  position: absolute;
-  top: 483px;
-  left: 324px;
-  font-size: var(--body-lg-semi-size);
-  line-height: 140%;
-  font-weight: 600;
-}
-.base-price-per,
-.delivery-frequency,
-.kg,
-.subtotal {
-  left: 684px;
-}
-.delivery-frequency,
-.kg,
-.subtotal {
-  left: 901px;
-}
-.delivery-frequency,
-.subtotal {
-  left: 981px;
-}
-.delivery-frequency {
-  left: 1154px;
-}
-.image-9-icon {
-  position: absolute;
-  top: 0;
-  left: 97px;
-  width: 72px;
-  height: 72px;
-  object-fit: cover;
-}
-.daily,
-.div,
-.div1,
-.div2,
-.tomatoes {
-  position: absolute;
-  top: 27.5px;
-  left: 264px;
-  line-height: 140%;
-}
-.daily,
-.div,
-.div1,
-.div2 {
-  top: 27px;
-  left: 454px;
-}
-.daily,
-.div1,
-.div2 {
-  top: 27.5px;
-  left: 667px;
-}
-.daily,
-.div2 {
-  left: 740px;
-}
-.daily {
-  left: 935px;
-}
-.frame-child,
-.image-9-container,
-.image-9-group,
-.image-9-parent {
-  position: absolute;
-  top: 536px;
-  left: 228px;
-  width: 1080px;
-  height: 72px;
-}
-.frame-child,
-.image-9-container,
-.image-9-group {
-  top: 722px;
-}
-.frame-child,
-.image-9-container {
-  top: 626px;
-}
-.frame-child {
-  top: 16px;
-  left: 646px;
-  background-color: var(--color-gainsboro-100);
-  width: 50px;
-  height: 38px;
-}
-.frame-div,
-.my-basket-inner {
-  position: absolute;
-  top: 812px;
-  left: 228px;
-  width: 1080px;
-  height: 72px;
-}
-.my-basket-inner {
-  top: 1003px;
-  left: 254px;
-  border-radius: var(--br-981xl);
-  background-color: var(--color-black);
-  width: 20px;
-  height: 20px;
-}
-.my-basket-child1,
-.rectangle-div {
-  position: absolute;
-  background-color: var(--color-gainsboro-100);
-}
-.rectangle-div {
-  top: 1055px;
-  left: 254px;
-  border-radius: var(--br-981xl);
-  width: 20px;
-  height: 20px;
-}
-.my-basket-child1 {
-  top: 1124px;
-  left: 228px;
-  width: 1156px;
-  height: 97px;
-}
-.base-btn-base {
-  flex: 1;
-  border-radius: 4px;
-  border: 0px;      
-  box-sizing: border-box;
-  height: 48px;
-  overflow: hidden;
-  display: flex;
-  flex-direction: row;
-  padding: 16px var(--padding-5xl);
-  align-items: center;
-  justify-content: center;
-}
-
-.btn{
-    background-color: #FFFF;
-    color: black;
-    border: 0px solid #F97316;
-    padding: 30px;
-}
-
-.btn:hover {
-  background-color: #F97316;
-  color: #FFF;
-}
-
-.blue-button-base-simple {
-  position: absolute;
-  top: 1148px;
-  left: 1146px;
-  width: 194px;
-  display: flex;
-  border-width: 0px;
-  flex-direction: row;
-  align-items: flex-start;
-  justify-content: flex-start;
-  font-size: var(--body-lg-semi-size);
-  color: var(--gray-800);
-}
-.my-basket-child2 {
-  position: absolute;
-  top: 118px;
-  left: 239px;
-  background-color: rgba(166, 188, 244, 0.2);
-  width: 1135px;
-  height: 64px;
-}
-.all-orders-wil,
-.total-4-items {
-  position: absolute;
-  line-height: 140%;
-}
-.all-orders-wil {
-  top: 146px;
-  left: 270px;
-  font-size: var(--body-lg-semi-size);
-}
-.total-4-items {
-  top: 1163px;
-  left: 859px;
-}
-.my-basket {
-  position: relative;
-  background-color: var(--gray-100);
-  width: 100%;
-  height: 1281px;
-  overflow: hidden;
-  text-align: left;
-  font-size: var(--font-size-5xl);
-  color: var(--color-black);
-  font-family: var(--body-lg-semi);
-}
-
-</style>
 <body>
-    
+    <div class="palengke-landing-screen">
+      <div class="frame-parent">
+        <div class="logo-wrapper">
+          <div class="logo">Logo</div>
+        </div>
+        <div class="frame-group">
+          <div class="palengke-parent">
+            <div class="basket">
+              <div class="base-sidebar-item-states">
+                <div class="base-sidebar-item1">
+                  <div class="sidebar-item">
+                    <a href="/product"><i class="fas fa-home"></i> Back</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="palengke">
+              <div class="base-sidebar-item-states">
+                <div class="base-sidebar-item">
+                  <div class="sidebar-item">
+                    <a href="/"><i class="fas fa-home"></i> Palengke</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="basket">
+              <div class="base-sidebar-item-states">
+                <div class="base-sidebar-item1">
+                  <div class="sidebar-item">
+
+                    <a href="/"><i class="fas fa-shopping-cart"></i> My Basket</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="basket">
+              <div class="base-sidebar-item-states">
+                <div class="base-sidebar-item1">
+                  <div class="sidebar-item">
+
+                    <a href="/checkout"><i class="fas fa-file-alt"></i> My Orders</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="divider-horizontal">
+            <div class="divider-horizontal-child"></div>
+          </div>
+          {{#if phone}}
+          <div class="basket">
+            <div class="base-sidebar-item-states">
+              <div class="base-sidebar-item1">
+                <div class="sidebar-item">
+                    <a href="/"><i class="fas fa-user"></i>My Account</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="divider-horizontal">
+            <div class="divider-horizontal-child"></div>
+          </div>
+          {{/if}}
+          <div class="help-parent">
+            <div class="basket">
+              <div class="base-sidebar-item-states">
+                <div class="base-sidebar-item1">
+                  <div class="sidebar-item">
+                    <a href="/"><i class="fas fa-question-circle"></i>Help & Support</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            {{#if phone}}
+            <div class="basket">
+              <div class="base-sidebar-item-states">
+                <div class="base-sidebar-item1">
+                  <div class="sidebar-item">
+                    <form class="fas fa-sign-out-alt" action="/logout" method="post">
+                        <a href="/"><i class="fas fa-sign-out-alt"></i>Logout</a>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+            {{else}}
+            <div class="basket">
+              <div class="base-sidebar-item-states">
+                <div class="base-sidebar-item1">
+                  <div class="sidebar-item">
+
+                    <a href="/login"><i class="fas fa-sign-out-alt"></i>Login</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            {{/if}}
+          </div>
+        </div>
+      </div>
     <!-- Place sidenav -->
 
     <div class="checkout">Checkout</div>
@@ -477,40 +136,14 @@ body {
         <div class="subtotal">SUBTOTAL</div>
         <div class="delivery-frequency">DELIVERY FREQUENCY</div>
         <div class="image-9-parent">
-            <img class="image-9-icon" alt="" src="./public/image-9@2x.png" />
+        
+            <img class="image-9-icon" alt="" src="Porkchop.png" width="150px"/>
 
-            <div class="tomatoes">Tomatoes</div>
-            <div class="div">88</div>
-            <div class="div1">1</div>
-            <div class="div2">88</div>
+            <div class="tomatoes">Porkchop</div>
+            <div class="div">300</div>
+            <div class="div1">2</div>
+            <div class="div2">600</div>
             <div class="daily">Daily</div>
-        </div>
-        <div class="image-9-group">
-        <img class="image-9-icon" alt="" src="./public/image-91@2x.png" />
-
-            <div class="tomatoes">Tomatoes</div>
-            <div class="div">88</div>
-            <div class="div1">1</div>
-            <div class="div2">88</div>
-            <div class="daily">Daily</div>
-        </div>
-        <div class="image-9-container">
-            <img class="image-9-icon" alt="" src="./public/image-92@2x.png" />
-            <div class="tomatoes">Tomatoes</div>
-            <div class="div">88</div>
-            <div class="div1">1</div>
-            <div class="div2">88</div>
-            <div class="daily">Daily</div>
-        </div>
-        <div class="frame-div">
-            <img class="image-9-icon" alt="" src="./public/image-93@2x.png" />
-
-            <div class="tomatoes">Tomatoes</div>
-            <div class="div">88</div>
-            <div class="frame-child"></div>
-            <div class="div1">1</div>
-            <div class="div2">88</div>
-            <div class="daily">MWF</div>
         </div>
         <div class="my-basket-inner"></div>
         <div class="rectangle-div"></div>
@@ -524,7 +157,7 @@ body {
         <div class="all-orders-wil">
             All orders wil be delivered to you before 7AM.
         </div>
-        <div class="total-4-items"><b>Total (4 items): PHP 352</b></div>
+        <div class="total-4-items"><b>Total (1 items): PHP 600</b></div>
     </div>
 </body>
 </html>

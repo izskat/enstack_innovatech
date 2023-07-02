@@ -4,19 +4,22 @@ const Cart = require('../model/checkout.js')
 
 const checkoutController = {
     getCheckout: async function(req, res){
-        var active = req.session.phone;
+        var phone = req.session.phone;
         let cart = [];
         var query1 = {phone:phone};
         var total = 0;
 
-        console.log("CHECK OUT FOR " + e);
+        console.log("CHECK OUT FOR " + phone);
+        console.log(query1);
         let result = await Cart.find(query1);
         console.log("GET PRODUCTS")
+        console.log(result)
         for (i in result){
             var temp = {
                 item: x[i].item,
                 qty: x[i].qty,
                 price: x[i].price,
+                sum: x[i].qty * x[i].price
             }
             total = total + (x[i].qty * x[i].price)
             cart.push(temp)
