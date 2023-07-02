@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <title> Category: {{category}} </title>
+    <title> Product Category </title>
     <meta name="viewport" content="initial-scale=1, width=device-width" />
     <link href="/css/index.css" rel="stylesheet" />
     <link
@@ -14,8 +14,7 @@
       href="https://fonts.googleapis.com/css2?family=Barlow:wght@600&display=swap"
     />
     <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
-    </head>
-
+  </head>
   <body>
     <div class="palengke-landing-screen">
       <div class="frame-parent">
@@ -113,7 +112,7 @@
         {{#if result}}
         {{#each result}}
         <div class="image-9-parent">
-          <img class="image-9-icon" name="{{item}}" src="Porkchop.png" />
+          <img class="image-9-icon" name="{{item}}" src="{{item}}.png" />
         <div class="pork">{{item}}</div>
         <p> {{price}} </p>
         <p> {{qty}} </p>

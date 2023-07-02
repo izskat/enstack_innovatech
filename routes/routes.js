@@ -18,6 +18,6 @@ app.post("/logout", logoutController.getLogout);
 app.get('/signup', signupController.getSignup);
 app.post('/signup',signupController.postSignup);
 
-app.get('/product/:id', productController.getProducts);
+app.get('/product', productController.getProducts);
 
 module.exports = app;
