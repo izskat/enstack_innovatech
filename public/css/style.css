@@ -65,3 +65,72 @@ nav {
 }
 
   /* End of Navbar */
+
+   /* Login page styles */
+.login-container {
+    width: 300px;
+    margin: 0 auto;
+    padding: 100px 30px 100px 30px;
+    background-color: #f2f2f2;
+    border-radius: 5px;
+    text-align: center;
+    align-items: center;
+    min-width: 500px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.welcome-header {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.login-form label {
+    display: block;
+    margin-bottom: 10px;
+    text-align: left;
+}
+
+.login-form input[type="text"]{
+    width: 100%;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    margin-bottom: 10px;
+}
+
+input[type="password"]{
+    width: 100%;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    margin-bottom: 10px;
+}
+
+input[type="tel"]{
+    width: 100%;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    margin-bottom: 10px;
+}
+
+.login-button {
+    padding: 8px 16px;
+    background-color: #F97316;
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.signup-link {
+    margin-top: 10px;
+}
+
+.signup-link a {
+    color: #F97316;
+    text-decoration: none;
+}

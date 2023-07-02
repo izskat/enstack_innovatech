@@ -33,7 +33,7 @@
 <html>
     <head>
         <meta charset="utf-8" />
-        <title> Signup </title>
+        <title> Log In </title>
         <meta name="viewport" content="initial-scale=1, width=device-width" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Righteous:wght@400;700&display=swap"/>
@@ -42,62 +42,29 @@
 
 <body>
     {{> navbar}}
-    <div class="desktop-2">
-      <b class="tuloy-po-kayo">Tuloy po kayo!</b>
-      <div class="enter-your-mobile-container">
-        <form method="post">
+  <div class="login-container">
+    <h1 class="welcome-header">Tuloy po kayo!</h1>
+    <form class="login-form">
+      <label for = fname> First Name </label>
+        <input type ="text" placeholder="Enter First Name" name="fname" id="fname" required>
 
-          <label for = fname> First Name </label>
-          <input type ="text" placeholder="Enter First Name" name="fname" id="fname" required>
-          <br>
-          <label for = lname> Last Name </label>
-          <input type ="text" placeholder="Enter Last Name" name="lname" id="lname" required>
-          <br>
-          <label for = phone> Phone </label>
-          <input type ="tel" placeholder="Enter Phone" name="phone" id="phone" required>
-          <br>
-          <label for = password> Password </label>
-          <input type ="password" placeholder="Enter Password" name="password" id="password" required>
-          <br>          
-          <label for = storename> Store Name </label>
-          <input type ="text" placeholder="Enter Store Name" name="storename" id="storename" required>
-          <br>
-          <label for = storeadd> Store Address </label>
-          <input type ="text" placeholder="Enter Store's Address" name="storeadd" id="storeadd" required>
-          <br>
-          <input type="submit" value="Signup" id="submit">
-        </form>
-      </div>
-      <div class="vector-parent">
-        <img class="vector-icon" alt="" src="./public/vector.svg" />
+        <label for = lname> Last Name </label>
+        <input type ="text" placeholder="Enter Last Name" name="lname" id="lname" required>
 
-        <div class="div">+63</div>
-      </div>
-      <div class="dont-have-account-container">
-        <span>
-          <span class="dont-have-account">Have an Account?</span>
-          <span class="span1"> </span>
-        </span>
-        <a href="/login"><b class="sign-up">Log in</b></a>
-      </div>
-      <div class="sign-in-wrapper">
-        <b class="sign-in">Sign In</b>
-      </div>
-      <div class="vector-group">
-        <img class="frame-child" alt="" src="./public/arrow-1.svg" />
+        <label for = phone> Phone </label>
+        <input type ="tel" placeholder="Enter Phone" name="phone" id="phone" required>
 
-        <div class="balik">Balik</div>
-      </div>
-      <div class="desktop-2-child"></div>
-      <b class="kain-na">KAIN NA</b>
-      <img class="desktop-2-item" alt="" src="./public/frame-6.svg" />
+        <label for = password> Password </label>
+        <input type ="password" placeholder="Enter Password" name="password" id="password" required>
+        
+        <label for = storename> Store Name </label>
+        <input type ="text" placeholder="Enter Store Name" name="storename" id="storename" required>
 
-      <img class="desktop-2-inner" alt="" src="./public/frame-7.svg" />
-
-      <img class="frame-icon" alt="" src="./public/frame-8.svg" />
-
-      <div class="rectangle-div"></div>
-      <div class="maghanap-dito">Maghanap dito</div>
-    </div>
+        <label for = storeadd> Store Address </label>
+        <input type ="text" placeholder="Enter Store's Address" name="storeadd" id="storeadd" required>
+      <button type="submit" class="login-button">Log in</button>
+      <p class="signup-link"> Have an account? <a href="/login">Log In</a></p>
+    </form>
+  </div>
   </body>
 </html>
