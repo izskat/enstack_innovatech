@@ -1,6 +1,5 @@
 # enstack_innovatech
-// install all packages
-npm install
-
-//run the code
-node index
+Local Set Up
+Make sure MongoDB is installed and running.
+Run npm install after downloading the file given in canvas
+To run the application, execute node index.js
