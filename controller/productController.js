@@ -21,15 +21,16 @@ const productController = {
     },
 
     getProducts: async function(req,res){
-        let result = await Product.find({__v: 0});
+        item = 'Pork'
+        var query1 = {category: item}
+        let result = await Product.find(query1);
         console.log("GET PRODUCTS")
-        res.render('index', {result: result});
+        console.log(result)
+        res.render('product', {result: result, phone: req.session.phone});
     },
 
     getProductDetail:function(req,res){
         item = req.params.id;
-        console.log(item)
-
         var query = {item: item}
 
         db.findOne(Product, query, null, function(x){
@@ -42,7 +43,7 @@ const productController = {
                 info: x.info,            
             }           
 
-            res.render('product', {result: result})
+            res.render('product', {result: result, phone: req.session.phone})
         })
     },
 }

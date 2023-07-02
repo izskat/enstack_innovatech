@@ -11,7 +11,7 @@ const logoutController = {
             req.session.destroy(function(err){
                 if (err) throw err
                 console.log("Logout Successful!");
-				res.render("index");
+				res.render("index", {phone: req.session.phone});
             });
 
         else

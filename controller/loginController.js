@@ -19,11 +19,10 @@ const loginController = {
 
 			// finds if user is existing
 			db.findOne(User, query1, null, function(x) {
-				console.log("went here pa rin");
+				console.log("went here");
 				// checks if password is equal
 				if(x)
-					bcrypt.compare(p, x.password, async function(err, equal) {
-						
+					bcrypt.compare(p, x.password, async function(err, equal) {	
 						if(equal){
 							
 							req.session.phone = x.phone;
@@ -33,7 +32,7 @@ const loginController = {
 
 							let result = await Product.find({__v: 0});
 							console.log("GET PRODUCTS")
-							res.render('index', {result: result});
+							res.render('index', {phone: x.phone});
 						}
 						else{
 							console.log("Password not found!");

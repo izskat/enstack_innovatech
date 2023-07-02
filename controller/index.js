@@ -3,7 +3,7 @@ const db = require('../model/db.js');
 
 const controller = {
     getIndex: function (req, res) {
-      res.render('index')
+      res.render('index', {phone: req.session.phone})
     },
 
     getFavicon: function (req, res) {

@@ -1,19 +1,129 @@
 <!DOCTYPE html>
-<head>
-    <title> {{item}} </title>
-</head>
-<body>
-    <a href="/"> Home </a>
-    <a href="/login"> Login</a>
-    <a href="/signup"> Signup </a>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title> Category: {{category}} </title>
+    <meta name="viewport" content="initial-scale=1, width=device-width" />
+    <link href="/css/index.css" rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Righteous:wght@400&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Barlow:wght@600&display=swap"
+    />
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    </head>
 
-    <div>
-        <img src="{{result.item}}.jpg" alt="{{result.item}}" width="200px" height="200px"><br>
-        <p> {{result.item}} </p>
-        <p> {{result.price}} </p>
-        <p> {{result.qty}} </p>
-        <p> {{result.category}} </p>
-        <p> {{result.info}} </p>
-    </div>
+  <body>
+    <div class="palengke-landing-screen">
+      <div class="frame-parent">
+        <div class="logo-wrapper">
+          <div class="logo">Logo</div>
+        </div>
+        <div class="frame-group">
+          <div class="palengke-parent">
+            <div class="palengke">
+              <div class="base-sidebar-item-states">
+                <div class="base-sidebar-item">
+                  <div class="sidebar-item">
+                    <a href="/"><i class="fas fa-home"></i> Palengke</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="basket">
+              <div class="base-sidebar-item-states">
+                <div class="base-sidebar-item1">
+                  <div class="sidebar-item">
 
-</body>
+                    <a href="/"><i class="fas fa-shopping-cart"></i> My Basket</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="basket">
+              <div class="base-sidebar-item-states">
+                <div class="base-sidebar-item1">
+                  <div class="sidebar-item">
+
+                    <a href="/"><i class="fas fa-file-alt"></i> My Orders</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="divider-horizontal">
+            <div class="divider-horizontal-child"></div>
+          </div>
+          {{#if phone}}
+          <div class="basket">
+            <div class="base-sidebar-item-states">
+              <div class="base-sidebar-item1">
+                <div class="sidebar-item">
+                    <a href="/"><i class="fas fa-user"></i>My Account</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="divider-horizontal">
+            <div class="divider-horizontal-child"></div>
+          </div>
+          {{/if}}
+          <div class="help-parent">
+            <div class="basket">
+              <div class="base-sidebar-item-states">
+                <div class="base-sidebar-item1">
+                  <div class="sidebar-item">
+                    <a href="/"><i class="fas fa-question-circle"></i>Help & Support</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            {{#if phone}}
+            <div class="basket">
+              <div class="base-sidebar-item-states">
+                <div class="base-sidebar-item1">
+                  <div class="sidebar-item">
+                    <form class="fas fa-sign-out-alt" action="/logout" method="post">
+                        <a href="/"><i class="fas fa-sign-out-alt"></i>Logout</a>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+            {{else}}
+            <div class="basket">
+              <div class="base-sidebar-item-states">
+                <div class="base-sidebar-item1">
+                  <div class="sidebar-item">
+
+                    <a href="/login"><i class="fas fa-sign-out-alt"></i>Login</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            {{/if}}
+          </div>
+        </div>
+      </div>
+      <div class="hello-marias-caranderia">Hello, Maria’s Caranderia!</div>
+      <div class="frame-container">
+        {{#if result}}
+        {{#each result}}
+        <div class="image-9-parent">
+          <img class="image-9-icon" name="{{item}}" src="Porkchop.png" />
+        <div class="pork">{{item}}</div>
+        <p> {{price}} </p>
+        <p> {{qty}} </p>
+        </div>
+        {{"\n"~}}
+        {{/each}}
+        {{/if}}
+      </div>
+      <div class="palengke-landing-screen-child"></div>
+      <div class="what-are-you">What are you looking for today?</div>
+      <img class="search-icon" alt="" src="15.png" />
+  </body>
+</html>

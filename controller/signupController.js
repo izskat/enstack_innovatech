@@ -22,6 +22,8 @@ const signupController = {
         var storename = req.body.storename;
         var storeadd = req.body.storeadd;
 
+        console.log(req.body.password)
+
         console.log("Registering " + phone + "...");
         
         // crypts the password of the user

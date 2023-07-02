@@ -26,7 +26,7 @@ const cartController = {
                 console.log(total);
                 console.log(cart);
                 
-                res.render('cart', {result: cart, total:total});
+                res.render('cart', {result: cart, total:total, phone: req.session.phone});
     }
 }
 
