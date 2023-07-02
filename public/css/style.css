@@ -1,0 +1,67 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow&display=swap');
+
+/* Navbar */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Barlow';
+}
+    
+  /* Navigation bar styles */
+nav {
+    background: #FFF;
+    height: 77px;
+    flex-shrink: 0;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 30px 10px 30px;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.search-bar {
+    display: flex;
+    align-items: center;
+}
+
+.search-bar input[type="text"] {
+    padding: 5px;
+    width: 800px; /* Adjust the width as needed */
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    margin-right: 5px;
+}
+
+.search-bar button {
+    padding: 5px;
+    background-color: #FFB752;
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+}
+
+.user-actions button {
+    padding: 5px;
+    margin-left: 5px;
+    border: none;
+    border-radius: 3px;
+}
+
+.icon-button {
+    background-color: transparent;
+    color: #000;
+    border: none;
+}
+
+.icon-button i {
+    font-size: 20px;
+}
+
+  /* End of Navbar */
