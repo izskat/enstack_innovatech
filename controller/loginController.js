@@ -1,8 +1,8 @@
 const db = require('../model/db');
+const Product = require('../model/product.js');
+const User = require('../model/user');
 
 const bcrypt = require('bcryptjs');
-
-const User = require('../model/user');
 
 const loginController = {
     getLogin: function(req,res){
@@ -22,7 +22,7 @@ const loginController = {
 				console.log("went here pa rin");
 				// checks if password is equal
 				if(x)
-					bcrypt.compare(p, x.password, function(err, equal) {
+					bcrypt.compare(p, x.password, async function(err, equal) {
 						
 						if(equal){
 							
@@ -31,7 +31,9 @@ const loginController = {
 							
 							console.log(' Successfully Logged In ' + x.phone);
 
-							res.render('index');
+							let result = await Product.find({__v: 0});
+							console.log("GET PRODUCTS")
+							res.render('index', {result: result});
 						}
 						else{
 							console.log("Password not found!");

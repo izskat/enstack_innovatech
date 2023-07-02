@@ -41,11 +41,32 @@
     </head>
 
 <body>
+    {{> navbar}}
     <div class="desktop-2">
       <b class="tuloy-po-kayo">Tuloy po kayo!</b>
       <div class="enter-your-mobile-container">
-        <span>Enter your Mobile Number</span>
-        <span class="span">*</span>
+        <form method="post">
+
+          <label for = fname> First Name </label>
+          <input type ="text" placeholder="Enter First Name" name="fname" id="fname" required>
+          <br>
+          <label for = lname> Last Name </label>
+          <input type ="text" placeholder="Enter Last Name" name="lname" id="lname" required>
+          <br>
+          <label for = phone> Phone </label>
+          <input type ="tel" placeholder="Enter Phone" name="phone" id="phone" required>
+          <br>
+          <label for = password> Password </label>
+          <input type ="password" placeholder="Enter Password" name="password" id="password" required>
+          <br>          
+          <label for = storename> Store Name </label>
+          <input type ="text" placeholder="Enter Store Name" name="storename" id="storename" required>
+          <br>
+          <label for = storeadd> Store Address </label>
+          <input type ="text" placeholder="Enter Store's Address" name="storeadd" id="storeadd" required>
+          <br>
+          <input type="submit" value="Signup" id="submit">
+        </form>
       </div>
       <div class="vector-parent">
         <img class="vector-icon" alt="" src="./public/vector.svg" />
@@ -54,10 +75,10 @@
       </div>
       <div class="dont-have-account-container">
         <span>
-          <span class="dont-have-account">Don’t Have Account?</span>
+          <span class="dont-have-account">Have an Account?</span>
           <span class="span1"> </span>
         </span>
-        <b class="sign-up">Sign up</b>
+        <a href="/login"><b class="sign-up">Log in</b></a>
       </div>
       <div class="sign-in-wrapper">
         <b class="sign-in">Sign In</b>

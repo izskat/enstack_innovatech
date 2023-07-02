@@ -11,6 +11,7 @@ const port = 3000;
 const url = 'mongodb+srv://innovatech:jRb1O2GRJSxDme3N@innovatech.6cdiwky.mongodb.net/?retryWrites=true&w=majority'
 
 app.set('view engine', 'hbs');
+hbs.registerPartials(__dirname + '/views/partials')
 
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
